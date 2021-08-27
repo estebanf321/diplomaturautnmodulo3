@@ -83,7 +83,7 @@ nav ul li a.activo{
 }
 
 .holder{
-    width: 960px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -335,7 +335,7 @@ margin: 0 0 0 1em;
     }
         
     header h1{  
-        font-size: 2em;  
+        font-size: 1.8em;  
     }
     
     .holder{
