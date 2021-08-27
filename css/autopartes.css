@@ -7,7 +7,10 @@ body{
 
 header{
     background-color: white;
-    padding: 1em 0;
+    /* padding: 1em 0; */
+    padding-bottom: 0;
+    padding-top: 1em;
+    
 }
 
 header h1{
@@ -20,20 +23,28 @@ header h1{
     bottom: 30px;
 }
 
+/* desaparece la barra menu*/
+.menu_bar {
+	display:none;
+}
+
 nav{
     background-color: black;
-    margin-bottom: 2em;
+    margin-bottom: 2em;  
 }
 
 nav ul{
+    overflow:hidden;
     list-style: none;
     margin: 0;
     padding: 0;
 } 
 
 nav ul li{
-    display: inline-block;
-    width: 16.3%;
+
+    float:left;
+    /* display: inline-block;
+    width: 16.3%; */
 }
 
 nav ul li a{
@@ -41,7 +52,12 @@ nav ul li a{
     text-decoration: none;
     text-align: center;
     display: block;
-    padding: 0.2em 0.4em;
+    padding: 20px;
+}
+
+nav ul li i {
+    /*margen para que no quede el icono con el texto junto*/
+	margin-right:10px;
 }
 
 nav ul li a:hover{
@@ -237,11 +253,11 @@ margin: 0 0 0 1em;
     display: block;
     align-content: center;
 }
-
+/* 
 .galeria .foto:nth-child(3n+1){
     margin-left: 0;
     border-color: blue;
-}
+} */
 
 .galeria .foto:hover{
     border-color: black;
@@ -307,3 +323,69 @@ margin: 0 0 0 1em;
 }
 
 /* fin contacto*/
+
+/* 
+@media screen and (min-width: 320px) and (max-width: 800px){ */
+
+    @media screen and (max-width: 800px){
+
+    body{
+        padding:0;
+		margin:0;
+    }
+        
+    header h1{  
+        font-size: 2em;  
+    }
+    
+    .holder{
+           width: 100%;
+           /* margin-left: 5%; */
+           /* margin-right: 5%; */
+    }
+
+    nav {
+		width:80%;
+		height: 100%;
+		left:-100%;
+        margin:0;
+		position: fixed;
+	}
+
+    nav ul li {
+       	display:block;
+		float:none;
+         /* lalinea para que queden separados los items*/
+		border-bottom:1px solid rgba(255,255,255, .3);
+	}
+
+    .menu_bar {
+        /*hacemos aparecer la barra de menu*/
+		display:block;
+		width:100%;
+		background:black;
+	}
+
+    .menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:black;
+		color:white;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.menu_bar i{
+        /*mandamos el icono a la derecha y lo agrandamos*/
+		float:right;
+		font-size:25px;
+
+	}    
+
+
+    
+}
