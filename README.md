@@ -1,1 +1,0 @@
-# diplomaturautnmodulo3
